@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "Bundler",
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+
+    // path alias 경로 별칭 설정
+    "baseUrl": ".",
+    "paths": {
+      "@assets/*": ["src/assets/*"],
+      "@components/*": ["src/components/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@layouts/*": ["src/layouts/*"],
+      "@pages/*": ["src/pages/*"],
+      "@store/*": ["src/store/*"],
+      "@typings/*": ["src/typings/*"],
+      "@utils/*": ["src/utils/*"],
+      "@apis/*": ["src/apis/*"],
+      "@routes/*": ["src/routes/*"]
+    },
+
+    "types": ["kakao.maps.d.ts", "vite-plugin-svgr/client"]
+  },
+  "include": ["src", ".eslintrc.cjs", "vite-env.d.ts", "svg.d.ts"],
+  "exclude": ["vite.config.ts"]
+}

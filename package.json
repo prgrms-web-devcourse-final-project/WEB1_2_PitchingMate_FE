@@ -1,0 +1,52 @@
+{
+  "name": "final-project",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint src --ext .ts,.tsx",
+    "preview": "vite preview",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:ui": "vitest --ui"
+  },
+  "dependencies": {
+    "@stomp/stompjs": "^7.0.0",
+    "@tanstack/react-query": "^5.60.2",
+    "ky": "^1.7.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-kakao-maps-sdk": "^1.1.27",
+    "react-loading-skeleton": "^3.5.0",
+    "react-router-dom": "^6.28.0",
+    "styled-components": "^6.1.13",
+    "styled-normalize": "^8.1.1",
+    "swiper": "^11.1.14",
+    "ws": "^8.18.0",
+    "zustand": "^5.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@typescript-eslint/parser": "^7.0.0",
+    "@vitejs/plugin-react": "^4.3.3",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^18.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "globals": "^15.11.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.3.3",
+    "vite": "^5.4.10",
+    "vite-plugin-svgr": "^4.3.0",
+    "vitest": "^2.1.5"
+  }
+}
