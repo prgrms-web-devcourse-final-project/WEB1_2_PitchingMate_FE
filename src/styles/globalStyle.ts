@@ -1,5 +1,5 @@
 import normalize from 'styled-normalize'
-import { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
   ${normalize}
@@ -30,6 +30,22 @@ export const GlobalStyle = createGlobalStyle`
   a {
     text-decoration: none;
     color: inherit;
+  }
+
+  svg {
+    display: block;
+  }
+
+  #root {
+    width: 100%;
+    max-width: 480px;
+    height: 100vh;
+    overflow-x: hidden;
+    margin: 0 auto;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 
   input {
@@ -77,6 +93,11 @@ export const GlobalStyle = createGlobalStyle`
   img {
     display: block;
   }
+`
+
+export const GlobalContainer = styled.div`
+  min-height: 100vh;
+  position: relative;
 `
 
 export default GlobalStyle

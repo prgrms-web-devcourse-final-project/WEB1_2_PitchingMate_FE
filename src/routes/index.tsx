@@ -1,9 +1,12 @@
+import GlobalLayout from '@layouts/GlobalLayout'
 import { Routes, Route } from 'react-router-dom'
 
 const AppRoutes = () => {
   return (
     <Routes>
-      <Route path='/' />
+      <Route element={<GlobalLayout />}>
+        <Route path='/' />
+      </Route>
     </Routes>
   )
 }

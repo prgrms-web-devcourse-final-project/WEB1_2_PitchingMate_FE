@@ -33,6 +33,8 @@ export const theme = {
     semi: 600,
     bold: 700,
   },
+
+  border: '#d3d3d3'
 }
 
 export type Theme = typeof theme
