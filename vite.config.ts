@@ -18,6 +18,7 @@ export default defineConfig({
       '@utils': path.resolve(__dirname, './src/utils'),
       '@apis': path.resolve(__dirname, './src/apis'),
       '@routes': path.resolve(__dirname, './src/routes'),
+      '@styles': path.resolve(__dirname, './src/styles'),
     },
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
   },

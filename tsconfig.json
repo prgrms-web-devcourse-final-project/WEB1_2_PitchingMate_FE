@@ -32,11 +32,18 @@
       "@typings/*": ["src/typings/*"],
       "@utils/*": ["src/utils/*"],
       "@apis/*": ["src/apis/*"],
-      "@routes/*": ["src/routes/*"]
+      "@routes/*": ["src/routes/*"],
+      "@styles/*": ["src/styles/*"]
     },
 
     "types": ["kakao.maps.d.ts", "vite-plugin-svgr/client"]
   },
-  "include": ["src", ".eslintrc.cjs", "vite-env.d.ts", "svg.d.ts"],
+  "include": [
+    "src",
+    ".eslintrc.cjs",
+    "vite-env.d.ts",
+    "svg.d.ts",
+    "styled.d.ts"
+  ],
   "exclude": ["vite.config.ts"]
 }
