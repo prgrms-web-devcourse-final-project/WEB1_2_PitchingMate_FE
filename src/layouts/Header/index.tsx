@@ -1,13 +1,8 @@
 import { Link } from 'react-router-dom'
-
+import { HeaderBox, LogoWrap } from './style'
 import Logo from '/public/PITCHING MATE.svg?react'
-import Alarm from '@assets/icon/alarm.svg?react'
-
-import { AlarmWrap, HeaderBox, LogoWrap, NewAlarmPoint } from './style'
-import { useState } from 'react'
+import Alarm from '@components/Alarm'
 const Header = () => {
-  const [newAlarmStatus, setNewAlarmStatus] = useState(true)
-
   return (
     <HeaderBox>
       <LogoWrap>
@@ -15,12 +10,7 @@ const Header = () => {
           <Logo />
         </Link>
       </LogoWrap>
-      <AlarmWrap>
-        <Link to='/'>
-          {newAlarmStatus ? <NewAlarmPoint /> : null}
-          <Alarm />
-        </Link>
-      </AlarmWrap>
+      <Alarm />
     </HeaderBox>
   )
 }
