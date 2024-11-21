@@ -7,6 +7,8 @@ export const ErrorPageContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 0 20px;
+  gap: 20px;
 
   & h1 {
     font-size: ${({ theme }) => theme.fontSize.xlarge};

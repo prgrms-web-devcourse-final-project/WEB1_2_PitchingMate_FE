@@ -8,8 +8,6 @@ const AppRoutes = () => {
     <Routes>
       <Route element={<GlobalLayout />}>
         <Route path='/' />
-      </Route>
-      <Route element={<GlobalLayout />}>
         <Route
           path='/goods'
           element={<GoodsCard />}
