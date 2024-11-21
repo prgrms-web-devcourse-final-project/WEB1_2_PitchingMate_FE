@@ -4,7 +4,7 @@ export const CardContainer = styled.div`
   width: 100%;
   display: flex;
   gap: 16px;
-  padding: 16px 20px;
+  padding: 1em 1.25em;
   border-bottom: 1px solid ${({ theme }) => theme.fontColor.cwhite};
 `
 export const CardContent = styled.div`
