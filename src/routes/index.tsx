@@ -1,4 +1,5 @@
 import GlobalLayout from '@layouts/GlobalLayout'
+import ErrorPage from '@pages/ErrorPage'
 import { Routes, Route } from 'react-router-dom'
 
 const AppRoutes = () => {
@@ -7,6 +8,10 @@ const AppRoutes = () => {
       <Route element={<GlobalLayout />}>
         <Route path='/' />
       </Route>
+      <Route
+        path='*'
+        element={<ErrorPage />}
+      />
     </Routes>
   )
 }
