@@ -21,3 +21,13 @@ export const ErrorContent = styled.div`
   align-items: center;
   justify-content: center;
 `
+
+export const ErrorButton = styled.button`
+  width: 100%;
+  padding: 0.94em 0;
+  font-size: ${({ theme }) => theme.fontSize.medium};
+  font-weight: ${({ theme }) => theme.fontWeight.semi};
+  border-radius: 5px;
+  background-color: ${({ theme }) => theme.fontColor.navy};
+  color: ${({ theme }) => theme.fontColor.cwhite};
+`

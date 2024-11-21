@@ -1,7 +1,6 @@
-import { ErrorContent, ErrorPageContainer } from './style'
-import ErrorImage from '@assets/character/character-worst.svg?react'
-import GlobalButton from '@components/GlobalButton'
+import { ErrorButton, ErrorContent, ErrorPageContainer } from './style'
 import { useNavigate } from 'react-router-dom'
+import ErrorImage from '@assets/character/character-worst.svg?react'
 
 const ErrorPage = () => {
   const navigate = useNavigate()
@@ -9,6 +8,7 @@ const ErrorPage = () => {
   const handleClick = () => {
     navigate('/')
   }
+
   return (
     <ErrorPageContainer>
       <ErrorContent>
@@ -18,11 +18,7 @@ const ErrorPage = () => {
           height={100}
         />
       </ErrorContent>
-      <GlobalButton
-        $isNavy
-        text='홈으로 돌아가기'
-        onClick={handleClick}
-      />
+      <ErrorButton onClick={handleClick}>홈으로 돌아가기</ErrorButton>
     </ErrorPageContainer>
   )
 }
