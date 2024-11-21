@@ -34,7 +34,7 @@ export const theme = {
     bold: 700,
   },
 
-  border: '#d3d3d3'
+  border: '#d3d3d3',
 }
 
 export type Theme = typeof theme

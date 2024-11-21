@@ -1,7 +1,7 @@
 import Header from '@layouts/Header'
 import GlobalNav from '@layouts/GlobalNav'
-import { Outlet } from 'react-router-dom';
-import { GlobalContainer } from '@styles/globalStyle';
+import { Outlet } from 'react-router-dom'
+import { GlobalContainer } from '@styles/globalStyle'
 
 const GlobalLayout = () => {
   return (
@@ -12,7 +12,7 @@ const GlobalLayout = () => {
       </GlobalContainer>
       <GlobalNav />
     </div>
-  );
-};
+  )
+}
 
-export default GlobalLayout;
+export default GlobalLayout
