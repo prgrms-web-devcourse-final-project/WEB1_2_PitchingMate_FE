@@ -11,7 +11,7 @@ import {
 } from './style'
 import { useState } from 'react'
 import CardBedge from '@components/CardBedge'
-import Placeholder from '@assets/placeholder.svg?react'
+import Placeholder from '@assets/default/placeholder.svg?react'
 
 const GoodsCard = () => {
   const [hasImg, setHasImg] = useState(true)
