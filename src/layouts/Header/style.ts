@@ -19,20 +19,3 @@ export const HeaderBox = styled.header`
 export const LogoWrap = styled.h1`
   font-size: 1em;
 `
-
-export const AlarmWrap = styled.p`
-  & > a {
-    position: relative;
-  }
-`
-
-export const NewAlarmPoint = styled.p`
-  display: block;
-  width: 5px;
-  height: 5px;
-  background-color: #ff3b30;
-  border-radius: 50%;
-  position: absolute;
-  top: -4px;
-  left: -4px;
-`
