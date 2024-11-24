@@ -1,34 +1,22 @@
-import { useState } from 'react'
-import { ButtonWrapper } from './style'
+import { ButtonWrapper } from './style';
 
 interface PillButtonProps {
-  defaultSelected?: boolean // 기본 상태: 선택 여부
-  text: string // 버튼에 표시할 텍스트
-  disabled?: boolean // 기본 비활성화 상태
+  text: string;
+  isSelected: boolean; // 선택 상태
+  disabled?: boolean; // 비활성화 상태
+  onClick: () => void; // 클릭 이벤트 핸들러
 }
 
-const PillButton = ({
-  defaultSelected = false,
-  text,
-  disabled = false,
-}: PillButtonProps) => {
-  const [isSelected, setIsSelected] = useState(defaultSelected)
-  const [isDisabled, setIsDisabled] = useState(disabled)
-
-  const handleClick = () => {
-    if (isDisabled) return // 비활성화 상태에서는 클릭하지 않음
-    setIsSelected((prev) => !prev) // 선택 전/후 상태 토글
-  }
-
+const PillButton = ({ text, isSelected, disabled = false, onClick }: PillButtonProps) => {
   return (
     <ButtonWrapper
       isSelected={isSelected}
-      onClick={handleClick}
-      disabled={isDisabled}
+      onClick={disabled ? undefined : onClick} // 비활성화 상태에서는 클릭 비활성화
+      disabled={disabled}
     >
       {text}
     </ButtonWrapper>
-  )
-}
+  );
+};
 
-export default PillButton
+export default PillButton;
