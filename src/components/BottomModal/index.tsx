@@ -12,8 +12,10 @@ const BottomModal = ({ children }: ModalPropTypes) => {
     dialogRef.current?.showModal()
   }
 
-  const closeModal = () => {
-    dialogRef.current?.close()
+  const closeModal = (e: React.MouseEvent) => {
+    if (e.target === dialogRef.current) {
+      dialogRef.current?.close()
+    }
   }
 
   return (
@@ -21,9 +23,7 @@ const BottomModal = ({ children }: ModalPropTypes) => {
       <p onClick={openModal}>예시</p>
       <ModalDialog
         ref={dialogRef}
-        onClick={(e) => {
-          e.target === dialogRef.current && closeModal()
-        }}
+        onClick={closeModal}
       >
         {children}
       </ModalDialog>
