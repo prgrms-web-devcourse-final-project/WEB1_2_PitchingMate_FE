@@ -10,7 +10,14 @@ import LG from '@assets/teamLogo/LG.svg?react'
 import NC from '@assets/teamLogo/NC.svg?react'
 import SSG from '@assets/teamLogo/SSG.svg?react'
 
-const kboTeamInfo = {
+interface KboTeamInfo {
+  [key: string]: {
+    team: string
+    logo: React.VFC<React.SVGProps<SVGSVGElement>>
+  }
+}
+
+const kboTeamInfo: KboTeamInfo = {
   전체: {
     team: 'KBO',
     logo: KBO,
@@ -58,6 +65,6 @@ const kboTeamInfo = {
 }
 
 // 하단 토글에서 사용할 팀 이름 배열
-const kboTeamArr = Object.keys(kboTeamInfo)
+const kboTeamList = Object.keys(kboTeamInfo)
 
-export { kboTeamInfo, kboTeamArr }
+export { kboTeamInfo, kboTeamList }
