@@ -2,7 +2,6 @@ import Header from '@layouts/Header'
 import GlobalNav from '@layouts/GlobalNav'
 import { Outlet } from 'react-router-dom'
 import { GlobalContainer } from '@styles/globalStyle'
-import ProfileBedge from '@components/ProfileBedge'
 
 const GlobalLayout = () => {
   return (
