@@ -48,7 +48,11 @@ export default function TeamSelectModal() {
 
       <TeamStyle.TeamDialog
         ref={dialogRef}
-        onClose={closeModal}
+        onClick={(e) => {
+          if (e.target === dialogRef.current) {
+            closeModal(); // 백드롭 클릭 시 닫기
+          }
+        }}
       >
         <h2>마이팀 선택</h2>
         <TeamStyle.AllButton onClick={() => handleTeamSelect('전체')}>
