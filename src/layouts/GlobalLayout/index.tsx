@@ -10,11 +10,6 @@ const GlobalLayout = () => {
       <Header />
       <GlobalContainer>
         <Outlet />
-        <ProfileBedge
-          width={100}
-          height={100}
-          myTeam='LG'
-        />
       </GlobalContainer>
       <GlobalNav />
     </div>
