@@ -1,4 +1,6 @@
+import BottomModal from '@components/BottomModal'
 import GoodsCard from '@components/GoodsCard'
+import TeamSelectModal from '@components/TeamSelectModal'
 import GlobalLayout from '@layouts/GlobalLayout'
 import SubLayout from '@layouts/SubLayout'
 import ErrorPage from '@pages/ErrorPage'
@@ -12,6 +14,14 @@ const AppRoutes = () => {
         <Route
           path='/goods'
           element={<GoodsCard />}
+        />
+        <Route
+          path='/modal'
+          element={
+            <BottomModal>
+              <p>하이요</p>
+            </BottomModal>
+          }
         />
       </Route>
       <Route element={<SubLayout />}>
