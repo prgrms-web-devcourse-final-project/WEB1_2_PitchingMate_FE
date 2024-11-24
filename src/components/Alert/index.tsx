@@ -15,8 +15,10 @@ const Alert = ({ title, notice, actionText, cancelText }: AlertPropTypes) => {
     dialogRef.current?.showModal() // 모달 열기
   }
 
-  const closeModal = () => {
-    dialogRef.current?.close() // 모달 닫기
+  const closeModal = (e: React.MouseEvent) => {
+    if (e.target === dialogRef.current) {
+      dialogRef.current?.close() // 모달 닫기
+    }
   }
 
   return (
@@ -24,11 +26,7 @@ const Alert = ({ title, notice, actionText, cancelText }: AlertPropTypes) => {
       <p onClick={openModal}>열기</p>
       <AlertDialog
         ref={dialogRef}
-        onClick={(e) => {
-          if (e.target === dialogRef.current) {
-            closeModal()
-          }
-        }}
+        onClick={closeModal}
       >
         <h2>{title || '알럿 타이틀'}</h2>
         <AlertNotice>{notice || '알럿 명시 내용'}</AlertNotice>
