@@ -3,6 +3,7 @@ import TeamSelectModal from '@components/TeamSelectModal'
 import GlobalLayout from '@layouts/GlobalLayout'
 import SubLayout from '@layouts/SubLayout'
 import ErrorPage from '@pages/ErrorPage'
+import ProfileEdit from '@pages/ProfilePage/ProfileEdit'
 import ProfileMain from '@pages/ProfilePage/ProfileMain'
 import { Routes, Route } from 'react-router-dom'
 
@@ -21,7 +22,10 @@ const AppRoutes = () => {
           path='/profile'
           element={<ProfileMain />}
         />
-        <Route path='/profile/edit' />
+        <Route
+          path='/profile/edit'
+          element={<ProfileEdit />}
+        />
       </Route>
       <Route
         path='*'

@@ -24,33 +24,6 @@ export const ProfileEditWrap = styled.div`
   flex: 2;
 `
 
-export const ProfileImageEdit = styled.label`
-  width: 100px;
-  height: 100px;
-  position: relative;
-  cursor: pointer;
-
-  & > img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-  }
-
-  & > div {
-    width: 30%;
-    height: 30%;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    background-color: ${theme.fontColor.cwhite};
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-`
-
 export const ProfileUserNickname = styled.p`
   font-size: ${theme.fontSize.large};
   font-weight: ${theme.fontWeight.semi};
@@ -194,5 +167,83 @@ export const ProfileLinkWrap = styled.div`
       font-weight: ${theme.fontWeight.semi};
       color: ${theme.fontColor.black};
     }
+  }
+`
+
+// 프로필 수정 페이지
+
+export const ProfileImageEditWrap = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+`
+
+export const ProfileImageEdit = styled.label`
+  width: 100px;
+  height: 100px;
+  position: relative;
+  cursor: pointer;
+
+  & > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  & > div {
+    width: 30%;
+    height: 30%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: ${theme.fontColor.cwhite};
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+`
+
+export const ProfileEditInputWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 1em 20px;
+
+  & > label {
+    margin-bottom: 0.5em;
+    font-size: ${theme.fontSize.xlarge};
+    font-weight: ${theme.fontWeight.semi};
+    color: ${theme.fontColor.black};
+  }
+
+  & > textarea {
+    appearance: none;
+    resize: none;
+    border: 1px solid ${theme.fontColor.cwhite};
+    background-color: ${theme.fontColor.cwhite};
+    font-size: ${theme.fontSize.large};
+    font-weight: ${theme.fontWeight.regular};
+    padding: 1em;
+    border-radius: 5px;
+    min-height: 90px;
+
+    &:focus {
+      border: 1px solid ${theme.fontColor.navy};
+    }
+  }
+
+  & > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    background-color: ${theme.fontColor.cwhite};
+    font-size: ${theme.fontSize.large};
+    font-weight: ${theme.fontWeight.medium};
+    color: ${theme.fontColor.black};
+    border-radius: 4px;
+    cursor: pointer;
   }
 `
