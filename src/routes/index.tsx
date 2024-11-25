@@ -1,6 +1,7 @@
 import GoodsCard from '@components/GoodsCard'
 import GlobalLayout from '@layouts/GlobalLayout'
 import SubLayout from '@layouts/SubLayout'
+import ChatPage from '@pages/ChatPage'
 import ErrorPage from '@pages/ErrorPage'
 import MatePostingPage from '@pages/MatePostingPage'
 import { Routes, Route } from 'react-router-dom'
@@ -13,6 +14,10 @@ const AppRoutes = () => {
         <Route
           path='/goods'
           element={<GoodsCard />}
+        />
+        <Route
+          path='/chat'
+          element={<ChatPage />}
         />
       </Route>
       <Route element={<SubLayout />}>
