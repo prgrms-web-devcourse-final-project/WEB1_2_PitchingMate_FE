@@ -1,16 +1,16 @@
 class TabModel {
-  title: string
-  content: React.ReactNode
+  title?: string
   currentButton: { previous: boolean; next: boolean; isSubmit?: boolean }
+  content: React.ReactNode
 
   constructor(
-    title: string,
     content: React.ReactNode,
     currentButton: { previous: boolean; next: boolean; isSubmit?: boolean },
+    title?: string,
   ) {
-    this.title = title
     this.content = content
     this.currentButton = currentButton
+    this.title = title
   }
 }
 
