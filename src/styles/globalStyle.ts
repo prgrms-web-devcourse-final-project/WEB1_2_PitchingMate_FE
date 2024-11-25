@@ -96,7 +96,7 @@ export const GlobalStyle = createGlobalStyle`
 `
 
 export const GlobalContainer = styled.div`
-  min-height: 100vh;
+  height: calc(100vh - 48px);
   position: relative;
 `
 

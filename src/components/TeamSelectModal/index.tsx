@@ -8,7 +8,7 @@ interface Team {
   color: string // 팀 색상
 }
 
-const TEAM_LIST: Team[] = [
+export const TEAM_LIST: Team[] = [
   { name: '키움', color: theme.teams.kiwoom },
   { name: '두산', color: theme.teams.doosan },
   { name: '롯데', color: theme.teams.lotte },
@@ -50,7 +50,7 @@ export default function TeamSelectModal() {
         ref={dialogRef}
         onClick={(e) => {
           if (e.target === dialogRef.current) {
-            closeModal(); // 백드롭 클릭 시 닫기
+            closeModal() // 백드롭 클릭 시 닫기
           }
         }}
       >
