@@ -247,3 +247,95 @@ export const ProfileEditInputWrap = styled.div`
     cursor: pointer;
   }
 `
+
+// 후기 모아보기 페이지
+export const ReviewButtonWrap = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1.25em 20px;
+`
+
+export const ReviewWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1.875em 0;
+  padding: 0 20px 20px;
+`
+
+export const ReviewBox = styled.div`
+  width: 100%;
+
+  & > span {
+    display: block;
+    font-size: ${theme.fontSize.medium};
+    font-weight: ${theme.fontWeight.bold};
+    color: #2c4d94;
+  }
+
+  & > p {
+    font-size: ${theme.fontSize.medium};
+    font-weight: ${theme.fontWeight.medium};
+    color: ${theme.fontColor.black};
+    margin-top: 0.625em;
+  }
+
+  & > em {
+    display: block;
+    font-style: normal;
+    font-size: ${theme.fontSize.medium};
+    font-weight: ${theme.fontWeight.medium};
+    color: #7d7d7d;
+    margin-top: 0.75em;
+  }
+`
+
+export const ReviewLinkBox = styled.div`
+  width: 100%;
+  border: 1px solid #d5d5d5;
+  border-radius: 6px;
+  margin-top: 0.625em;
+
+  & > a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 6px 10px;
+
+    &::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+
+    & > div {
+      width: calc(100% - 24px);
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 0 16px;
+
+      & > span {
+        font-size: ${theme.fontSize.medium};
+        font-weight: ${theme.fontWeight.semi};
+        color: ${theme.fontColor.black};
+      }
+
+      & > i {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        width: 72%;
+        font-size: ${theme.fontSize.medium};
+        font-weight: ${theme.fontWeight.regular};
+        color: ${theme.fontColor.black};
+        font-style: normal;
+      }
+    }
+  }
+`

@@ -5,6 +5,7 @@ import SubLayout from '@layouts/SubLayout'
 import ErrorPage from '@pages/ErrorPage'
 import ProfileEdit from '@pages/ProfilePage/ProfileEdit'
 import ProfileMain from '@pages/ProfilePage/ProfileMain'
+import ReviewPage from '@pages/ProfilePage/ReviewPage'
 import { Routes, Route } from 'react-router-dom'
 
 const AppRoutes = () => {
@@ -25,6 +26,10 @@ const AppRoutes = () => {
         <Route
           path='/profile/edit'
           element={<ProfileEdit />}
+        />
+        <Route
+          path='/review'
+          element={<ReviewPage />}
         />
       </Route>
       <Route
