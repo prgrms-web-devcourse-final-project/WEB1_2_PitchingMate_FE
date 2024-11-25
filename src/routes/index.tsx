@@ -16,37 +16,8 @@ const AppRoutes = () => {
     <Routes>
       <Route element={<GlobalLayout />}>
         <Route path='/' />
-        <Route
-          path='/goods'
-          element={<GoodsCard />}
-        />
       </Route>
-      <Route element={<SubLayout />}>
-        <Route
-          path='/profile'
-          element={<ProfileMain />}
-        />
-        <Route
-          path='/profile/edit'
-          element={<ProfileEdit />}
-        />
-        <Route
-          path='/review'
-          element={<ReviewPage />}
-        />
-        <Route
-          path='/goodsrecord'
-          element={<GoodsRecordPage />}
-        />
-        <Route
-          path='/timeline'
-          element={<TimelinePage />}
-        />
-        <Route
-          path='/follow'
-          element={<FollowPage />}
-        />
-      </Route>
+      <Route element={<SubLayout />}></Route>
       <Route
         path='*'
         element={<ErrorPage />}
