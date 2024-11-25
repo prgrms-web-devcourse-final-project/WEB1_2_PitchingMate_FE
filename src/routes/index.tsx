@@ -7,6 +7,7 @@ import GoodsRecordPage from '@pages/GoodsRecordPage'
 import ProfileEdit from '@pages/ProfilePage/ProfileEdit'
 import ProfileMain from '@pages/ProfilePage/ProfileMain'
 import ReviewPage from '@pages/ProfilePage/ReviewPage'
+import TimelinePage from '@pages/TimelinePage'
 import { Routes, Route } from 'react-router-dom'
 
 const AppRoutes = () => {
@@ -35,6 +36,10 @@ const AppRoutes = () => {
         <Route
           path='/goodsrecord'
           element={<GoodsRecordPage />}
+        />
+        <Route
+          path='/timeline'
+          element={<TimelinePage />}
         />
       </Route>
       <Route
