@@ -1,8 +1,8 @@
 import GoodsCard from '@components/GoodsCard'
-import TeamSelectModal from '@components/TeamSelectModal'
 import GlobalLayout from '@layouts/GlobalLayout'
 import SubLayout from '@layouts/SubLayout'
 import ErrorPage from '@pages/ErrorPage'
+import MatePostingPage from '@pages/MatePostingPage'
 import { Routes, Route } from 'react-router-dom'
 
 const AppRoutes = () => {
@@ -16,7 +16,10 @@ const AppRoutes = () => {
         />
       </Route>
       <Route element={<SubLayout />}>
-        <Route path='/sub' />
+        <Route
+          path='/mate-posting'
+          element={<MatePostingPage />}
+        />
       </Route>
       <Route
         path='*'

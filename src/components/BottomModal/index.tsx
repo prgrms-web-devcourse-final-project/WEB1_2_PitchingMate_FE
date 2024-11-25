@@ -1,34 +1,30 @@
-import React, { useRef } from 'react'
+import React, { forwardRef } from 'react'
 import { ModalDialog } from './style'
 
 interface ModalPropTypes {
   children: React.ReactNode
+  ref: HTMLDialogElement
 }
 
-const BottomModal = ({ children }: ModalPropTypes) => {
-  const dialogRef = useRef<HTMLDialogElement>(null)
+const BottomModal = forwardRef<HTMLDialogElement, ModalPropTypes>(
+  ({ children }, ref) => {
+    if (!ref || !('current' in ref)) return null
 
-  const openModal = () => {
-    dialogRef.current?.showModal()
-  }
-
-  const closeModal = (e: React.MouseEvent) => {
-    if (e.target === dialogRef.current) {
-      dialogRef.current?.close()
+    const closeModal = (e: React.MouseEvent) => {
+      if (e.target === ref.current) {
+        ref.current?.close()
+      }
     }
-  }
 
-  return (
-    <div>
-      <p onClick={openModal}>예시</p>
+    return (
       <ModalDialog
-        ref={dialogRef}
+        ref={ref}
         onClick={closeModal}
       >
         {children}
       </ModalDialog>
-    </div>
-  )
-}
+    )
+  },
+)
 
 export default BottomModal
