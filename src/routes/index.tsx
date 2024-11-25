@@ -3,6 +3,7 @@ import TeamSelectModal from '@components/TeamSelectModal'
 import GlobalLayout from '@layouts/GlobalLayout'
 import SubLayout from '@layouts/SubLayout'
 import ErrorPage from '@pages/ErrorPage'
+import GoodsRecordPage from '@pages/GoodsRecordPage'
 import ProfileEdit from '@pages/ProfilePage/ProfileEdit'
 import ProfileMain from '@pages/ProfilePage/ProfileMain'
 import ReviewPage from '@pages/ProfilePage/ReviewPage'
@@ -30,6 +31,10 @@ const AppRoutes = () => {
         <Route
           path='/review'
           element={<ReviewPage />}
+        />
+        <Route
+          path='/goodsrecord'
+          element={<GoodsRecordPage />}
         />
       </Route>
       <Route
