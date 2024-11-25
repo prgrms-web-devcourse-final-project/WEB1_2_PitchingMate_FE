@@ -19,7 +19,7 @@ import LinkIcon from '@assets/icon/link.svg?react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 
-const ProfilePage = () => {
+const ProfileMain = () => {
   const navigate = useNavigate()
   const [isMyProfile, setIsMyProfile] = useState(true)
 
@@ -141,4 +141,4 @@ const ProfilePage = () => {
   )
 }
 
-export default ProfilePage
+export default ProfileMain
