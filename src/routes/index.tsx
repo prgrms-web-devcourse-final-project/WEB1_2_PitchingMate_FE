@@ -3,6 +3,7 @@ import TeamSelectModal from '@components/TeamSelectModal'
 import GlobalLayout from '@layouts/GlobalLayout'
 import SubLayout from '@layouts/SubLayout'
 import ErrorPage from '@pages/ErrorPage'
+import FollowPage from '@pages/FollowPage'
 import GoodsRecordPage from '@pages/GoodsRecordPage'
 import ProfileEdit from '@pages/ProfilePage/ProfileEdit'
 import ProfileMain from '@pages/ProfilePage/ProfileMain'
@@ -40,6 +41,10 @@ const AppRoutes = () => {
         <Route
           path='/timeline'
           element={<TimelinePage />}
+        />
+        <Route
+          path='/follow'
+          element={<FollowPage />}
         />
       </Route>
       <Route
