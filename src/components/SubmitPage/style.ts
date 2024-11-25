@@ -5,18 +5,27 @@ export const SubmitContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
   gap: 20px;
+  height: 100%;
+  padding: 20px 0;
 `
 
-export const SubmitTitle = styled.h1`
+export const SubmitTitle = styled.h2`
   font-size: 24px;
   font-weight: ${({ theme }) => theme.fontWeight.semi};
+  padding: 0 20px;
 `
 
-export const SubmitForm = styled.form``
+export const SubmitForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 48px - 29px);
+  gap: 30px;
+`
 
 export const ProcessSection = styled.div`
   display: flex;
   justify-content: space-between;
+  padding: 0 20px;
 `
 export const ProcessBar = styled.div<{ $isActive?: boolean }>`
   width: 30%;
@@ -29,6 +38,7 @@ export const ButtonContainer = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
+  padding: 0 20px;
 `
 
 export const Button = styled.button<{ $isPrevious?: boolean }>`

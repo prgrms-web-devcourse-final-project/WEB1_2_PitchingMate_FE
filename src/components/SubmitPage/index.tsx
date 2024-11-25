@@ -31,7 +31,7 @@ const SubmitPage = ({ components, initialTab }: SubmitPageProps) => {
     initialTab,
   })
 
-  if (!currentTab) return
+  if (!currentTab) return null
 
   // 현재 페이지가 직관모임 등록 페이지인지 상품 등록 페이지인지 확인
   const { pathname } = useLocation()
@@ -63,9 +63,7 @@ const SubmitPage = ({ components, initialTab }: SubmitPageProps) => {
   return (
     <SubmitContainer>
       {/* 최상단 타이틀 영역 */}
-      <div>
-        <SubmitTitle>{title}</SubmitTitle>
-      </div>
+      <SubmitTitle>{title}</SubmitTitle>
 
       {/* 직관 모임 등록 폼 영역 */}
       <SubmitForm>{content}</SubmitForm>
@@ -80,6 +78,7 @@ const SubmitPage = ({ components, initialTab }: SubmitPageProps) => {
             />
           ))}
         </ProcessSection>
+
         {/* 직관 모임 등록 버튼 영역 */}
         <ButtonContainer>
           {currentButton.previous && (
