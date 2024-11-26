@@ -5,6 +5,7 @@ import ErrorPage from '@pages/ErrorPage'
 import NotificationPage from '@pages/NotificationPage'
 import GoodsPostingPage from '@pages/GoodsPostingPage'
 import MatePostingPage from '@pages/MatePostingPage'
+import ReviewWritePage from '@pages/ReviewWritePage'
 import { Routes, Route } from 'react-router-dom'
 import SplashPage from '@pages/SplashPage'
 
@@ -34,6 +35,7 @@ const AppRoutes = () => {
         path='*'
         element={<ErrorPage />}
       />
+      
       <Route
         path='/notification'
         element={<NotificationPage />}
