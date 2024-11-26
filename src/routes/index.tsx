@@ -5,6 +5,8 @@ import ErrorPage from '@pages/ErrorPage'
 import NotificationPage from '@pages/NotificationPage'
 import GoodsPostingPage from '@pages/GoodsPostingPage'
 import MatePostingPage from '@pages/MatePostingPage'
+import ReviewWritePage from '@pages/ReviewWritePage'
+import MainPage from '@pages/MainPage'
 import { Routes, Route } from 'react-router-dom'
 
 const AppRoutes = () => {
@@ -16,6 +18,10 @@ const AppRoutes = () => {
         <Route
           path='/chat'
           element={<ChatPage />}
+        />
+        <Route
+          path='/main'
+          element={<MainPage />}
         />
       </Route>
       
