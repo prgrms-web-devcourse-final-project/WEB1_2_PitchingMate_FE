@@ -41,7 +41,7 @@ export default function TeamSelectModal() {
   return (
     <div>
       {/* 선택된 팀 이름 표시 */}
-      <TeamStyle.TeamSelectButton onClick={openModal}>
+      <TeamStyle.TeamSelectButton onClick={openModal} type='button'>
         {selectedTeam}
         <DownIcon />
       </TeamStyle.TeamSelectButton>
@@ -55,12 +55,13 @@ export default function TeamSelectModal() {
         }}
       >
         <h2>마이팀 선택</h2>
-        <TeamStyle.AllButton onClick={() => handleTeamSelect('전체')}>
+        <TeamStyle.AllButton type='button' onClick={() => handleTeamSelect('전체')}>
           전체
         </TeamStyle.AllButton>
         <TeamStyle.TeamList>
           {TEAM_LIST.map((team) => (
             <TeamStyle.TeamButton
+              type='button'
               key={team.name}
               color={team.color}
               onClick={() => handleTeamSelect(team.name)} // 클릭 시 팀 선택
