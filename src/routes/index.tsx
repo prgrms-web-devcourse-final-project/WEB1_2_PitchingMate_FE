@@ -8,6 +8,8 @@ import MatePostingPage from '@pages/MatePostingPage'
 import ReviewWritePage from '@pages/ReviewWritePage'
 import { Routes, Route } from 'react-router-dom'
 import SplashPage from '@pages/SplashPage'
+import LoginPage from '@pages/LoginPage'
+import SignupPage from '@pages/LoginPage/SignupPage'
 
 const AppRoutes = () => {
   return (
@@ -17,6 +19,14 @@ const AppRoutes = () => {
         <Route
           path='/chat'
           element={<ChatPage />}
+        />
+        <Route
+          path='/login'
+          element={<LoginPage />}
+        />
+        <Route
+          path='/login/signup'
+          element={<SignupPage />}
         />
       </Route>
 

@@ -7,12 +7,13 @@ export const StyledForm = styled.div`
   width: 100%;
   max-width: 480px;
   min-width: 350px;
-  padding: 1em 20px;
+  padding: 1em 1.25em;
 `
 
 export const StyledInputWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  margin-bottom: 1em;
 `
 
 export const StyledLabel = styled.label`
