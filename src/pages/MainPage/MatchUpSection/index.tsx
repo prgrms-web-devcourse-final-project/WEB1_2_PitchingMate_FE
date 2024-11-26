@@ -1,6 +1,9 @@
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
+import React from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Pagination } from 'swiper/modules';
+import 'swiper/css'
+import 'swiper/css/pagination'
+
 import {
   GameDatetimeLocation,
   TeamVersus,
@@ -8,18 +11,10 @@ import {
   UpdateInfo,
   Weather,
   MatchUpContainer,
-} from './style';
-import { kboTeamInfo } from '@utils/kboInfo';
+} from './style'
+import { kboTeamInfo } from '@utils/kboInfo'
 
 const matchData = [
-  {
-    homeTeam: '두산',
-    awayTeam: '롯데',
-    gameDateTime: '11월 26일 18시 30분',
-    location: '잠실 야구장',
-    weather: '맑음 12°C',
-    lastUpdated: '15시',
-  },
   {
     homeTeam: '삼성',
     awayTeam: 'LG',
@@ -28,15 +23,28 @@ const matchData = [
     weather: '구름 많음 10°C',
     lastUpdated: '15시',
   },
+  {
+    homeTeam: '두산',
+    awayTeam: '롯데',
+    gameDateTime: '11월 26일 18시 30분',
+    location: '잠실 야구장',
+    weather: '맑음 12°C',
+    lastUpdated: '15시',
+  },
   // 추가 경기 데이터...
-];
+]
 
 const MatchUpSection = () => {
   return (
-    <Swiper spaceBetween={16} slidesPerView={1}>
+    <Swiper
+      spaceBetween={0}
+      slidesPerView={1}
+      pagination={true}
+      modules={[Pagination]}
+    >
       {matchData.map((match, index) => {
-        const homeTeamColor = kboTeamInfo[match.homeTeam].color;
-        const awayTeamColor = kboTeamInfo[match.awayTeam].color;
+        const homeTeamColor = kboTeamInfo[match.homeTeam].color
+        const awayTeamColor = kboTeamInfo[match.awayTeam].color
 
         return (
           <SwiperSlide key={index}>
@@ -50,9 +58,13 @@ const MatchUpSection = () => {
                 </span>
               </GameDatetimeLocation>
               <TeamVersus>
-                <div>{React.createElement(kboTeamInfo[match.homeTeam].logo)}</div>
+                <div>
+                  {React.createElement(kboTeamInfo[match.homeTeam].logo)}
+                </div>
                 <span>vs</span>
-                <div>{React.createElement(kboTeamInfo[match.awayTeam].logo)}</div>
+                <div>
+                  {React.createElement(kboTeamInfo[match.awayTeam].logo)}
+                </div>
               </TeamVersus>
               <LocationWeather>
                 <UpdateInfo>
@@ -62,10 +74,10 @@ const MatchUpSection = () => {
               </LocationWeather>
             </MatchUpContainer>
           </SwiperSlide>
-        );
+        )
       })}
     </Swiper>
-  );
-};
+  )
+}
 
-export default MatchUpSection;
+export default MatchUpSection

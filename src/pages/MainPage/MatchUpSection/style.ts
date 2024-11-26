@@ -1,30 +1,32 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
+import { theme } from '@styles/theme'
 
-export const MatchUpContainer = styled.div<{ homeColor: string; awayColor: string }>`
+export const MatchUpContainer = styled.div<{
+  homeColor: string
+  awayColor: string
+}>`
   padding: 1.25em;
   background: ${({ homeColor, awayColor }) =>
-    `linear-gradient(135deg, ${homeColor} 0%, ${awayColor} 100%)`};
-  color: white; /* 텍스트가 잘 보이도록 설정 */
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-`;
+    `linear-gradient(90deg, ${homeColor} 0%, ${awayColor} 100%)`};
+  color: ${theme.fontColor.white}; /* 텍스트가 잘 보이도록 설정 */
+`
 
 export const GameDatetimeLocation = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 16px;
-  font-size: 14px;
-  color: white; /* 배경과 대비되는 색상 */
-`;
+  margin-bottom: 20px;
+  font-size: ${theme.fontSize.medium};
+  color: ${theme.fontColor.white};
+`
 
 export const TeamVersus = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 16px;
+  gap: 40px;
   font-size: 18px;
-  font-weight: bold;
+  font-weight: ${theme.fontWeight.bold};
 
   & > div {
     width: 80px;
@@ -33,8 +35,6 @@ export const TeamVersus = styled.div`
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    border-radius: 50%;
-    background-color: white; /* 로고 배경을 흰색으로 설정 */
   }
 
   & > div > svg {
@@ -42,23 +42,27 @@ export const TeamVersus = styled.div`
     height: 100%;
     object-fit: contain;
   }
-`;
+
+  span {
+    font-size: ${theme.fontSize.xlarge};
+  }
+`
 
 export const LocationWeather = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 16px;
-  font-size: 14px;
-`;
+  margin-top: 1em;
+  font-size: ${theme.fontSize.medium};
+`
 
 export const UpdateInfo = styled.div`
   display: flex;
   flex-direction: column;
-  color: white; /* 텍스트 색상 */
-`;
+  color: ${theme.fontColor.white};
+`
 
 export const Weather = styled.div`
-  font-size: 14px;
-  color: white;
-`;
+  font-size: ${theme.fontSize.medium};
+  color: ${theme.fontColor.white};
+`
