@@ -20,6 +20,14 @@ export const SubmitForm = styled.form`
   flex-direction: column;
   height: calc(100% - 48px - 29px);
   gap: 30px;
+
+  /* 하단 버튼 영역 때문에 가려서 하단 패딩 삽입 */
+  padding-bottom: 10px;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 `
 
 export const ProcessSection = styled.div`
@@ -27,9 +35,14 @@ export const ProcessSection = styled.div`
   justify-content: space-between;
   padding: 0 20px;
 `
-export const ProcessBar = styled.div<{ $isActive?: boolean }>`
-  width: 30%;
+
+export const ProcessBar = styled.div<{
+  $isActive?: boolean
+  $totalLength: number
+}>`
   height: 4px;
+  width: ${({ $totalLength }) => `${95 / $totalLength}%`};
+
   background-color: ${({ theme, $isActive }) =>
     $isActive ? theme.fontColor.navy : theme.fontColor.cwhite};
 `
