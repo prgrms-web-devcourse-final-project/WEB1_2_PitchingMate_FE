@@ -3,7 +3,10 @@ import SubLayout from '@layouts/SubLayout'
 import ChatPage from '@pages/ChatPage'
 import ChatRoom from '@pages/ChatRoom'
 import ErrorPage from '@pages/ErrorPage'
+import NotificationPage from '@pages/NotificationPage'
+import GoodsPostingPage from '@pages/GoodsPostingPage'
 import MatePostingPage from '@pages/MatePostingPage'
+import ReviewWritePage from '@pages/ReviewWritePage'
 import { Routes, Route } from 'react-router-dom'
 
 const AppRoutes = () => {
@@ -18,6 +21,10 @@ const AppRoutes = () => {
       </Route>
 
       <Route element={<SubLayout />}>
+        <Route
+          path='/goods-posting'
+          element={<GoodsPostingPage />}
+        />
         <Route
           path='/mate-posting'
           element={<MatePostingPage />}
