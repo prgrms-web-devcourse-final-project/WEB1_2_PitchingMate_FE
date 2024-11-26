@@ -1,5 +1,6 @@
 import normalize from 'styled-normalize'
 import styled, { createGlobalStyle } from 'styled-components'
+import { theme } from './theme'
 
 export const GlobalStyle = createGlobalStyle`
   ${normalize}
@@ -97,8 +98,35 @@ export const GlobalStyle = createGlobalStyle`
 `
 
 export const GlobalContainer = styled.div`
-  height: calc(100vh - 48px);
+  height: calc(100vh - (48px * 2));
+  overflow-y: scroll;
   position: relative;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+`
+
+export const GlobalFloatAside = styled.aside`
+  width: 100%;
+  min-width: 360px;
+  max-width: 480px;
+  margin: 0 auto;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+`
+
+export const GlobalFloatButton = styled.div`
+  display: inline;
+  padding: 14px;
+  position: absolute;
+  bottom: calc(60px + 8px);
+  right: 8px;
+  border-radius: 50%;
+  filter: drop-shadow(2px 2px 5px #00000025);
+  background-color: ${theme.fontColor.white};
 `
 
 export default GlobalStyle

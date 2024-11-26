@@ -1,7 +1,8 @@
-import { theme } from '@styles/theme';
-import styled from "styled-components";
+import { theme } from '@styles/theme'
+import styled from 'styled-components'
 
 export const NavWrap = styled.nav`
+  background-color: ${theme.fontColor.white};
   border-top: 1px solid ${({ theme }) => theme.border};
   width: 100%;
   height: 60px;
@@ -9,6 +10,7 @@ export const NavWrap = styled.nav`
   position: sticky;
   bottom: 0;
   left: 0%;
+  z-index: 98;
 `
 
 export const NavUl = styled.ul`

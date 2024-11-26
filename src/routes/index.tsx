@@ -7,6 +7,7 @@ import GoodsPostingPage from '@pages/GoodsPostingPage'
 import MatePostingPage from '@pages/MatePostingPage'
 import ReviewWritePage from '@pages/ReviewWritePage'
 import { Routes, Route } from 'react-router-dom'
+import MateListPage from '@pages/MateListPage'
 
 const AppRoutes = () => {
   return (
@@ -16,6 +17,10 @@ const AppRoutes = () => {
         <Route
           path='/chat'
           element={<ChatPage />}
+        />
+        <Route
+          path='/matelist'
+          element={<MateListPage />}
         />
       </Route>
 
@@ -34,7 +39,7 @@ const AppRoutes = () => {
         path='*'
         element={<ErrorPage />}
       />
-      
+
       <Route
         path='/notification'
         element={<NotificationPage />}

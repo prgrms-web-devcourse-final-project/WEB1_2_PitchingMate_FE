@@ -1,7 +1,13 @@
 import Header from '@layouts/Header'
 import GlobalNav from '@layouts/GlobalNav'
 import { Outlet } from 'react-router-dom'
-import { GlobalContainer } from '@styles/globalStyle'
+import {
+  GlobalContainer,
+  GlobalFloatAside,
+  GlobalFloatButton,
+} from '@styles/globalStyle'
+
+import Write from '@assets/icon/write.svg?react'
 
 const GlobalLayout = () => {
   return (
@@ -10,6 +16,11 @@ const GlobalLayout = () => {
       <GlobalContainer>
         <Outlet />
       </GlobalContainer>
+      <GlobalFloatAside>
+        <GlobalFloatButton>
+          <Write />
+        </GlobalFloatButton>
+      </GlobalFloatAside>
       <GlobalNav />
     </div>
   )
