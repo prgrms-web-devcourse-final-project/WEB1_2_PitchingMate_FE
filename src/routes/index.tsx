@@ -1,6 +1,7 @@
 import GlobalLayout from '@layouts/GlobalLayout'
 import SubLayout from '@layouts/SubLayout'
 import ChatPage from '@pages/ChatPage'
+import ChatRoom from '@pages/ChatRoom'
 import ErrorPage from '@pages/ErrorPage'
 import NotificationPage from '@pages/NotificationPage'
 import GoodsPostingPage from '@pages/GoodsPostingPage'
@@ -38,16 +39,15 @@ const AppRoutes = () => {
           path='/mate-posting'
           element={<MatePostingPage />}
         />
+        <Route
+          path='/chat-room'
+          element={<ChatRoom />}
+        />
       </Route>
 
       <Route
         path='*'
         element={<ErrorPage />}
-      />
-      
-      <Route
-        path='/notification'
-        element={<NotificationPage />}
       />
     </Routes>
   )
