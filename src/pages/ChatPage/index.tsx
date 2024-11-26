@@ -8,10 +8,10 @@ import Alert from '@components/Alert'
 import ALERT_MESSAGE from '@utils/alertMessage'
 
 export const CHAT_TAB_LIST = ['메이트', '굿즈', '일반'] as const
+export type ChatType = (typeof CHAT_TAB_LIST)[number]
 
 const ChatPage = () => {
-  const [currentTab, setCurrentTab] =
-    useState<(typeof CHAT_TAB_LIST)[number]>('메이트')
+  const [currentTab, setCurrentTab] = useState<ChatType>('메이트')
 
   const alertRef = useRef<HTMLDialogElement>(null)
 
@@ -19,7 +19,7 @@ const ChatPage = () => {
     alertRef.current?.showModal()
   }
 
-  const handleTabClick = (tab: (typeof CHAT_TAB_LIST)[number]) => {
+  const handleTabClick = (tab: ChatType) => {
     setCurrentTab(tab)
   }
 
