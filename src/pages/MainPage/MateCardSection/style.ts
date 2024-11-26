@@ -16,5 +16,6 @@ export const MateCardContainer = styled.div`
     font-weight: ${theme.fontWeight.regular};
     text-align: center;
     cursor: pointer;
+    color: ${theme.fontColor.black};
   }
 `
