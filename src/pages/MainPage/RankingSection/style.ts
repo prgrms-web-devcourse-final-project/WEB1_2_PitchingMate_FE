@@ -23,6 +23,7 @@ export const RankingTable = styled.table`
 
   thead {
     color: #d9d9d9;
+    border-top: 1px solid ${theme.fontColor.cwhite};
     border-bottom: 1px solid ${theme.fontColor.cwhite};
 
     /* 순위와 팀 열 숨김 */
@@ -45,7 +46,6 @@ export const RankingTable = styled.table`
     border-bottom: 1px solid ${theme.fontColor.cwhite};
     font-weight: ${theme.fontWeight.bold};
     font-size: ${theme.fontSize.medium};
-    height: 30px;
   }
 
   .team {

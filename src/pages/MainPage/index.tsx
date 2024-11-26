@@ -1,4 +1,4 @@
-import { MainPageContainer } from './style'
+import { MainPageContainer, TeamSelectWrapper } from './style'
 import TeamSelectSection from '@components/TeamSelectSection'
 import MatchUpSection from './MatchUpSection'
 import MateCardSection from './MateCardSection'
@@ -9,7 +9,9 @@ const MainPage = () => {
   return (
     <MainPageContainer>
       <MatchUpSection />
+      <TeamSelectWrapper>
       <TeamSelectSection />
+      </TeamSelectWrapper>
       <MateCardSection />
       <GoodsCardSection />
       <RankingSection />
