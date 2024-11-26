@@ -14,6 +14,7 @@ export const HeaderBox = styled.header`
   position: sticky;
   top: 0;
   left: 0;
+  z-index: 98;
 `
 
 export const LogoWrap = styled.h1`

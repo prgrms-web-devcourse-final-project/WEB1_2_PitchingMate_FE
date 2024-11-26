@@ -15,6 +15,8 @@ export const SubHeaderBox = styled.header`
   position: sticky;
   top: 0;
   left: 0;
+
+  z-index: 98;
 `
 export const SubHeaderLeft = styled.div`
   width: 24px;

@@ -1,7 +1,8 @@
 import styled, { css } from 'styled-components'
 import { theme } from '@styles/theme'
 
-export const ButtonWrapper = styled.button<{ isSelected: boolean }>`
+export const ButtonWrapper = styled.button<{ $isSelected: boolean }>`
+
   all: unset;
   display: inline-flex;
   justify-content: center;
@@ -16,7 +17,7 @@ export const ButtonWrapper = styled.button<{ isSelected: boolean }>`
     color 0.3s;
 
   ${(props) =>
-    props.isSelected
+    props.$isSelected
       ? css`
           background-color: ${theme.teams.kbo};
           color: ${theme.fontColor.white};

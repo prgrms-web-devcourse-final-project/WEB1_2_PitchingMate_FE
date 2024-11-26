@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import { forwardRef } from 'react'
 import { AlertButtonWrap, AlertDialog, AlertNotice } from './style'
 import GlobalButton from '@components/GlobalButton'
 
@@ -7,25 +7,21 @@ interface AlertPropTypes {
   notice: string
   actionText: string
   cancelText?: string
+  ref: React.RefObject<HTMLDialogElement>
 }
 
-const Alert = ({ title, notice, actionText, cancelText }: AlertPropTypes) => {
-  const dialogRef = useRef<HTMLDialogElement>(null)
-  const openModal = () => {
-    dialogRef.current?.showModal() // 모달 열기
-  }
+const Alert = forwardRef<HTMLDialogElement, AlertPropTypes>(
+  ({ title, notice, actionText, cancelText }, ref) => {
+    if (!ref || !('current' in ref)) return null
 
-  const closeModal = (e: React.MouseEvent) => {
-    if (e.target === dialogRef.current) {
-      dialogRef.current?.close() // 모달 닫기
+    const closeModal = (e: React.MouseEvent) => {
+      e.stopPropagation()
+      ref.current?.close() // 모달 닫기
     }
-  }
 
-  return (
-    <div>
-      <p onClick={openModal}>열기</p>
+    return (
       <AlertDialog
-        ref={dialogRef}
+        ref={ref}
         onClick={closeModal}
       >
         <h2>{title || '알럿 타이틀'}</h2>
@@ -41,8 +37,8 @@ const Alert = ({ title, notice, actionText, cancelText }: AlertPropTypes) => {
           />
         </AlertButtonWrap>
       </AlertDialog>
-    </div>
-  )
-}
+    )
+  },
+)
 
 export default Alert
