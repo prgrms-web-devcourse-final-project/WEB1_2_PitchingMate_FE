@@ -26,16 +26,6 @@ export const NotificationList = styled.ul`
       background-color: ${theme.fontColor.cwhite}; /* 읽은 알림 배경색 */
     }
 
-    .new-badge {
-      width: 4px;
-      height: 4px;
-      border-radius: 50%;
-      background-color: red;
-      position: absolute;
-      top: 10px;
-      left: 10px;
-    }
-
     .content {
       .message {
         font-size: ${theme.fontSize.medium};
