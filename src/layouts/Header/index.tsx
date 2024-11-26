@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { HeaderBox, LogoWrap } from './style'
-import Logo from '/public/PITCHING MATE.svg?react'
+import Logo from '@assets/logo/logo_navy.svg?react'
 import Alarm from '@components/Alarm'
 const Header = () => {
   return (

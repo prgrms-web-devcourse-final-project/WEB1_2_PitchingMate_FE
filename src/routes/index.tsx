@@ -8,6 +8,7 @@ import GoodsPostingPage from '@pages/GoodsPostingPage'
 import MatePostingPage from '@pages/MatePostingPage'
 import ReviewWritePage from '@pages/ReviewWritePage'
 import { Routes, Route } from 'react-router-dom'
+import SplashPage from '@pages/SplashPage'
 import LoginPage from '@pages/LoginPage'
 import SignupPage from '@pages/LoginPage/SignupPage'
 
