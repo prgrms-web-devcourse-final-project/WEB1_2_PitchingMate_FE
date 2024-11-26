@@ -41,6 +41,7 @@ export const GlobalStyle = createGlobalStyle`
     max-width: 480px;
     height: 100vh;
     overflow-x: hidden;
+    overflow-y: hidden;
     margin: 0 auto;
 
     &::-webkit-scrollbar {
