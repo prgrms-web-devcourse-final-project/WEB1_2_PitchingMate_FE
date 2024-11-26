@@ -6,11 +6,11 @@ import NotificationPage from '@pages/NotificationPage'
 import GoodsPostingPage from '@pages/GoodsPostingPage'
 import MatePostingPage from '@pages/MatePostingPage'
 import { Routes, Route } from 'react-router-dom'
+import SplashPage from '@pages/SplashPage'
 
 const AppRoutes = () => {
   return (
     <Routes>
-      
       <Route element={<GlobalLayout />}>
         <Route path='/' />
         <Route
@@ -18,7 +18,7 @@ const AppRoutes = () => {
           element={<ChatPage />}
         />
       </Route>
-      
+
       <Route element={<SubLayout />}>
         <Route
           path='/goods-posting'
@@ -29,7 +29,7 @@ const AppRoutes = () => {
           element={<MatePostingPage />}
         />
       </Route>
-      
+
       <Route
         path='*'
         element={<ErrorPage />}
