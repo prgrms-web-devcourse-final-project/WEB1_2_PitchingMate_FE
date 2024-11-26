@@ -8,6 +8,7 @@ interface ProfileBedgePropTypes {
   height: number
   imageSrc?: string
   myTeam?: keyof typeof kboTeamInfo
+  isChat?: boolean
 }
 
 const ProfileBedge = ({
@@ -15,6 +16,7 @@ const ProfileBedge = ({
   height,
   imageSrc,
   myTeam,
+  isChat,
 }: ProfileBedgePropTypes) => {
   const renderMyTeam = () => {
     const teamInfo = myTeam ? kboTeamInfo[myTeam] : kboTeamInfo['전체']
@@ -27,7 +29,7 @@ const ProfileBedge = ({
       height={height}
     >
       {imageSrc ? <ProfileImage src={imageSrc} /> : <DefaultProfile />}
-      <ProfileMyTeamWrap>{renderMyTeam()}</ProfileMyTeamWrap>
+      {!isChat && <ProfileMyTeamWrap>{renderMyTeam()}</ProfileMyTeamWrap>}
     </ProfileWrap>
   )
 }

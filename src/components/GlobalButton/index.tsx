@@ -4,7 +4,7 @@ interface GlobalButtonProps {
   text?: string
   $isNavy?: boolean
   $width?: number
-  onClick: () => void
+  onClick?: (e: React.MouseEvent) => void
 }
 
 const GlobalButton = ({ text, ...rest }: GlobalButtonProps) => {
