@@ -2,6 +2,7 @@ import GlobalLayout from '@layouts/GlobalLayout'
 import SubLayout from '@layouts/SubLayout'
 import ChatPage from '@pages/ChatPage'
 import ErrorPage from '@pages/ErrorPage'
+import NotificationPage from '@pages/NotificationPage'
 import GoodsPostingPage from '@pages/GoodsPostingPage'
 import MatePostingPage from '@pages/MatePostingPage'
 import { Routes, Route } from 'react-router-dom'
@@ -33,7 +34,10 @@ const AppRoutes = () => {
         path='*'
         element={<ErrorPage />}
       />
-      
+      <Route
+        path='/notification'
+        element={<NotificationPage />}
+      />
     </Routes>
   )
 }
