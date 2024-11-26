@@ -1,10 +1,8 @@
 import styled, { css } from 'styled-components'
 import { theme } from '@styles/theme'
 
-// shouldForwardProp을 사용하여 isSelected 필터링
-export const ButtonWrapper = styled.button.withConfig({
-  shouldForwardProp: (prop) => prop !== 'isSelected', // isSelected를 DOM으로 전달하지 않음
-})<{ isSelected: boolean }>`
+export const ButtonWrapper = styled.button<{ $isSelected: boolean }>`
+
   all: unset;
   display: inline-flex;
   justify-content: center;
@@ -19,7 +17,7 @@ export const ButtonWrapper = styled.button.withConfig({
     color 0.3s;
 
   ${(props) =>
-    props.isSelected
+    props.$isSelected
       ? css`
           background-color: ${theme.teams.kbo};
           color: ${theme.fontColor.white};
