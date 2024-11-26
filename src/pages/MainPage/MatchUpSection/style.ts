@@ -11,6 +11,26 @@ export const MatchUpContainer = styled.div<{
   color: ${theme.fontColor.white}; /* 텍스트가 잘 보이도록 설정 */
 `
 
+export const PaginationContainer = styled.div`
+  margin-top: 10px; /* 배경 아래로 간격 추가 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
+    background: #d9d9d9; /* 기본 색상 */
+    opacity: 0.7;
+    margin: 0 5px;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: ${theme.fontColor.navy}; /* 활성화된 색상 */
+    opacity: 1;
+  }
+`;
+
 export const GameDatetimeLocation = styled.div`
   display: flex;
   justify-content: center;
