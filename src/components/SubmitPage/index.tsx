@@ -63,7 +63,7 @@ const SubmitPage = ({ components, initialTab }: SubmitPageProps) => {
   return (
     <SubmitContainer>
       {/* 최상단 타이틀 영역 */}
-      <SubmitTitle>{title}</SubmitTitle>
+      {title && <SubmitTitle>{title}</SubmitTitle>}
 
       {/* 직관 모임 등록 폼 영역 */}
       <SubmitForm>{content}</SubmitForm>
@@ -74,6 +74,7 @@ const SubmitPage = ({ components, initialTab }: SubmitPageProps) => {
           {components.map((_, index) => (
             <ProcessBar
               key={index}
+              $totalLength={components.length}
               $isActive={index <= selectedTab}
             />
           ))}

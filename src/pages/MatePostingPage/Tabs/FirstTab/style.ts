@@ -16,6 +16,12 @@ export const QuestionSection = styled.div`
 
   & input {
     margin-top: 0 !important;
+    border: none !important;
+    outline: 1px solid ${({ theme }) => theme.fontColor.cwhite};
+  }
+
+  & input:focus {
+    outline: 1px solid ${({ theme }) => theme.fontColor.navy};
   }
 `
 
@@ -29,4 +35,6 @@ export const SelectButton = styled.div`
   color: ${({ theme }) => theme.fontColor.navy};
   font-weight: ${({ theme }) => theme.fontWeight.medium};
   font-size: ${({ theme }) => theme.fontSize.large};
+
+  border-radius: 0.25em;
 `

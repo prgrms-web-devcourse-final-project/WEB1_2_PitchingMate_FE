@@ -16,19 +16,31 @@ import TabModel from '@utils/tabModel'
  */
 
 const matePostingComponents = [
-  new TabModel('어떤 경기를 직관하고 싶나요?', <FirstTab />, {
-    previous: false,
-    next: true,
-  }),
-  new TabModel('어떤 메이트와 직관하고 싶나요?', <SecondTab />, {
-    previous: true,
-    next: true,
-  }),
-  new TabModel('어떤 직관 모임을 만들까요?', <ThirdTab />, {
-    previous: true,
-    next: false,
-    isSubmit: true,
-  }),
+  new TabModel(
+    <FirstTab />,
+    {
+      previous: false,
+      next: true,
+    },
+    '어떤 경기를 직관하고 싶나요?',
+  ),
+  new TabModel(
+    <SecondTab />,
+    {
+      previous: true,
+      next: true,
+    },
+    '어떤 메이트와 직관하고 싶나요?',
+  ),
+  new TabModel(
+    <ThirdTab />,
+    {
+      previous: true,
+      next: false,
+      isSubmit: true,
+    },
+    '어떤 직관 모임을 만들까요?',
+  ),
 ]
 
 const matePostingInitialOptions = {

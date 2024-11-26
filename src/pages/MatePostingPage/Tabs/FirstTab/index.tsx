@@ -1,26 +1,19 @@
 import { QuestionSection, SelectButton } from './style'
 
-import { useRef, useState } from 'react'
-
 import DownIcon from '@assets/icon/down.svg?react'
 
 import BottomModal from '@components/BottomModal'
 import BottomModalOption from './BottomModalOption'
 import GameButtonList from './GameButtonList'
+import useTeamDialog from '@hooks/useTeamDialog'
 
 const FirstTab = () => {
-  const [selectedTeam, setSelectedTeam] = useState<string | null>(null)
-
-  const bottomModalRef = useRef<HTMLDialogElement>(null)
-
-  const handleClickSelectButton = () => {
-    bottomModalRef.current?.showModal()
-  }
-
-  const handleCloseModal = (team: string) => {
-    setSelectedTeam(team)
-    bottomModalRef.current?.close()
-  }
+  const {
+    selectedTeam,
+    bottomModalRef,
+    handleClickSelectButton,
+    handleTeamSelect,
+  } = useTeamDialog()
 
   return (
     <>
@@ -28,7 +21,7 @@ const FirstTab = () => {
         {/* 응원팀 선택 */}
         <label htmlFor='team'>응원팀 선택</label>
         <SelectButton onClick={handleClickSelectButton}>
-          <p>{selectedTeam ? selectedTeam : '팀 선택'}</p>
+          <p>{selectedTeam || '팀 선택'}</p>
           <DownIcon />
         </SelectButton>
       </QuestionSection>
@@ -38,7 +31,7 @@ const FirstTab = () => {
 
       {/* 응원팀 선택 모달 */}
       <BottomModal ref={bottomModalRef}>
-        <BottomModalOption onClose={handleCloseModal} />
+        <BottomModalOption onClose={handleTeamSelect} />
       </BottomModal>
     </>
   )
