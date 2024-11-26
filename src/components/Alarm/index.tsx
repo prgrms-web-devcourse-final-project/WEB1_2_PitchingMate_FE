@@ -7,7 +7,7 @@ const Alarm = () => {
   const [newAlarmStatus, setNewAlarmStatus] = useState(true)
   return (
     <AlarmWrap>
-      <Link to='/'>
+      <Link to='/notification'>
         {newAlarmStatus ? <NewAlarmPoint /> : null}
         <AlarmIcon></AlarmIcon>
       </Link>
