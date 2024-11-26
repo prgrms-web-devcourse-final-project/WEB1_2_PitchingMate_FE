@@ -8,16 +8,16 @@ import {
 
 interface Field {
   name: string;
-  placeholder: string;
+  placeholder?: string;
 }
 
 interface FormProps {
-  onSubmit: (formData: { [key: string]: string }) => void;
+  // onSubmit: (formData: { [key: string]: string }) => void;
   fieldList?: Field[];
 }
 
 function Form({
-  onSubmit,
+  // onSubmit,
   fieldList = [{ name: '라벨', placeholder: '플레이스 홀더' }],
 }: FormProps) {
   const initialFormState = fieldList.reduce(
@@ -34,13 +34,13 @@ function Form({
     setFormData({ ...formData, [field]: value });
   };
 
-  const handleSubmit = (event: React.FormEvent) => {
-    event.preventDefault();
-    onSubmit(formData);
-  };
+  // const handleSubmit = () => {
+  //   onSubmit(formData);
+  // };
 
   return (
-    <StyledForm onSubmit={handleSubmit}>
+    // <StyledForm onSubmit={handleSubmit}>
+      <StyledForm>
       {fieldList.map((field) => (
         <StyledInputWrapper key={field.name}>
           <StyledLabel htmlFor={field.name}>{field.name}</StyledLabel>
@@ -53,6 +53,9 @@ function Form({
           />
         </StyledInputWrapper>
       ))}
+      {/* <button type="button" onClick={handleSubmit}>
+        제출
+      </button> */}
     </StyledForm>
   );
 }
