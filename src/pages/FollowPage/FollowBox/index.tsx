@@ -12,6 +12,7 @@ interface FollowInfo {
     memberId: number
     nickname: string
     imageUrl: string
+    teamName: string
   }
 }
 
@@ -26,11 +27,13 @@ const FollowBox = ({ data }: FollowInfo) => {
             width={3.125}
             height={3.125}
             imageSrc={data.imageUrl}
+            myTeam={data.teamName}
           />
           <p>{data.nickname}</p>
         </Link>
       </FollowBoxLeft>
-      <FollowBoxRight>
+      {/* 채팅기능 관련으로 인해서 일단 주석처리 */}
+      {/* <FollowBoxRight>
         <Link to={'/'}>
           <Message />
         </Link>
@@ -43,7 +46,7 @@ const FollowBox = ({ data }: FollowInfo) => {
             <UserAdd />
           </Link>
         )}
-      </FollowBoxRight>
+      </FollowBoxRight> */}
     </FollowBoxWrap>
   )
 }

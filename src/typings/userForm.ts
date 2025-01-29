@@ -10,4 +10,5 @@ export interface UserInfo {
   reviewsCount: number
   teamName: string
   visitsCount?: number
+  isFollowing: boolean
 }

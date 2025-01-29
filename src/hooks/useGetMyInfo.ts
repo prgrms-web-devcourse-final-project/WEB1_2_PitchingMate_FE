@@ -8,8 +8,6 @@ const useGetMyInfo = (userId: number) => {
     queryFn: async () => userService.getMyInfo(userId),
   })
 
-  console.log(data)
-
   return { getMyInfo: data, isPending, isError, error }
 }
 

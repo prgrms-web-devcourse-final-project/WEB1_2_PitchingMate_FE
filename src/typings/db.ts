@@ -304,3 +304,34 @@ export interface ProfileEditApiResponse {
   status: string
   timestamp: string
 }
+
+export interface PostFollowingResponse {
+  code: number
+  data: null
+  message: null
+  status: string
+  timestamp: string
+}
+
+export interface FollowServiceApiResponse {
+  code: number
+  data: FollowServiceResponse
+  message: string | null
+  status: string
+  timestamp: string
+}
+
+export interface FollowServiceResponse {
+  content: FollowServiceDataContnet[]
+  hasNext: boolean
+  pageNumber: number
+  pageSize: number
+  totalElements: number
+  totalPages: number
+}
+
+export interface FollowServiceDataContnet {
+  imageUrl: string
+  memberId: number
+  nickname: string
+}

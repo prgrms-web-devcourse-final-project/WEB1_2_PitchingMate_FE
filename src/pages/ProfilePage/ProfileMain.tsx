@@ -76,11 +76,25 @@ const ProfileMain = () => {
     }
   }
 
-  // 쿼리키 타입오류뜨는데 뭔지모르겠음...
   const followUser = async () => {
     try {
       await followService.postFollowUser(Number(id))
-      id && queryClient.invalidateQueries([QUERY_KEY.USER_INFO, Number(id)])
+      id &&
+        queryClient.invalidateQueries({
+          queryKey: [QUERY_KEY.USER_INFO, Number(id)],
+        })
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  const unFollowUser = async () => {
+    try {
+      await followService.deleteFollowUser(Number(id))
+      id &&
+        queryClient.invalidateQueries({
+          queryKey: [QUERY_KEY.USER_INFO, Number(id)],
+        })
     } catch (error) {
       console.log(error)
     }
@@ -181,11 +195,19 @@ const ProfileMain = () => {
             />
           ) : (
             <ProfileButtonWrap>
-              <GlobalButton
-                $width={50}
-                text='팔로우'
-                onClick={followUser}
-              />
+              {userInfo && !userInfo.isFollowing ? (
+                <GlobalButton
+                  $width={50}
+                  text='팔로우'
+                  onClick={followUser}
+                />
+              ) : (
+                <GlobalButton
+                  $width={50}
+                  text='언팔로우'
+                  onClick={unFollowUser}
+                />
+              )}
               <GlobalButton
                 $width={50}
                 text='메세지 보내기'
