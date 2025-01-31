@@ -16,16 +16,16 @@ const followService = {
 
     return response.data
   },
-  getFollowingList: async (memberId: number, page: number) => {
+  getFollowList: async (memberId: number, page: number, type: string) => {
     const response = await fetchApi
       .get<FollowServiceApiResponse>(
-        `profile/${memberId}/followings?page=${page}&size=5`,
+        `profile/${memberId}/${type}?page=${page}&size=3`,
       )
       .json()
 
     return response.data
   },
-  getFollowerList: async (memberId: number, page: number) => {
+  /* getFollowerList: async (memberId: number, page: number) => {
     const response = await fetchApi
       .get<FollowServiceApiResponse>(
         `profile/${memberId}/followers?page=${page}&size=5`,
@@ -33,7 +33,7 @@ const followService = {
       .json()
 
     return response.data
-  },
+  }, */
 }
 
 export default followService
