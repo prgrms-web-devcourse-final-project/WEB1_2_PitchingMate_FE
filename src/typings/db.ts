@@ -334,4 +334,5 @@ export interface FollowServiceDataContnet {
   imageUrl: string
   memberId: number
   nickname: string
+  teamName: string
 }

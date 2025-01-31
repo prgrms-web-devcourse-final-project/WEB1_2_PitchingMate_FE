@@ -2,18 +2,11 @@ import ProfileBedge from '@components/ProfileBedge'
 import { FollowBoxLeft, FollowBoxRight, FollowBoxWrap } from '../style'
 import { Link } from 'react-router-dom'
 
-import Message from '@assets/icon/chat.svg?react'
-import UserAdd from '@assets/icon/user_add.svg?react'
-import UserAdded from '@assets/icon/user_added.svg?react'
 import { useState } from 'react'
+import { FollowServiceDataContnet } from '@typings/db'
 
 interface FollowInfo {
-  data: {
-    memberId: number
-    nickname: string
-    imageUrl: string
-    teamName: string
-  }
+  data: FollowServiceDataContnet
 }
 
 const FollowBox = ({ data }: FollowInfo) => {
