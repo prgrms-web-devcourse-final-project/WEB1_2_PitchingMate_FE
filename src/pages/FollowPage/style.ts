@@ -22,7 +22,9 @@ export const FollowBoxWrap = styled.div`
 `
 
 export const FollowBoxLeft = styled.div`
+  width: 100%;
   & > a {
+    width: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -41,4 +43,11 @@ export const FollowBoxRight = styled.div`
   align-items: center;
   padding: 0.625em;
   gap: 0.625em;
+`
+
+export const NoFollowBox = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
 `
